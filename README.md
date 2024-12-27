@@ -1,18 +1,30 @@
-# Geolonia アイコンセットのテンプレート
+# Geolonia アイコンセット テンプレート
 
-Geolonia Maps または Maplibre でアイコンを表示させるためにスプライトシートを作るテンプレート
+地図用のSVGアイコンセットとそのプレビューを提供するテンプレートです。主に防災・施設・交通関連のアイコンを収録しています。
 
-Geolonia Maps の標準アイコンセットはこちらのテンプレートを利用しているので、使い方にご参照にしてください。 [GitHub](https://github.com/geoloniamaps/sprite-gstd) [プレビュー](https://geoloniamaps.github.io/sprite-gstd/)
+## 特徴
+
+- 70以上の地図用SVGアイコン
+- Retina対応（1x, 2x）のスプライトシート
+- プレビュー用のWebページ付き
+- 防災、施設、交通など、様々なカテゴリのアイコンを収録
+
+## アイコンの命名規則
+
+- ケバブケースを使用（例: `fire-hose-hanger`, `bicycle-rental-port`）
+- 色の指定がある場合は末尾に追加（例: `bicycle-rental-port-green`, `public-facility-navy`）
+- 番号がある場合は2桁で表記（例: `evacuation-shelter-01`, `stream-gauge-02`）
+- スタイルを表す場合は末尾に追加（例: `speaker-filled`, `speaker-outlined`）
 
 ## 使い方
 
-こちらのレポジトリをテンプレートとして、新しいレポジトリを作成してください。その後、
+### スプライトシートの利用
 
-1. スプライトシートに追加したいアイコンを `icons` ディレクトリに追加
-1. GitHub Pages を GitHub Actions からデプロイするように設定する（ Settings → Pages → Source を GitHub Actions に変更）
-1. この README を編集
-1. `_site/index.html` の `<title>` `h1` タグ等を適切に編集します。
+スプライトシートは以下の4つのファイルで構成されています：
+- `sprite.png` - 1x解像度のスプライト画像
+- `sprite@2x.png` - 2x解像度のスプライト画像
+- `sprite.json` - 1x解像度のスプライト情報
+- `sprite@2x.json` - 2x解像度のスプライト情報
 
-ローカルで編集する場合は、 `npm install` 後に `npm run start` をすると、ローカルのサーバーが起動され、GitHubにプッシュする前に確認できます。
-
-うまく行けば、スプライトシートが `https://<GitHub username>.github.io/<repository name>/sprite.png` でホスティングされます。MapLibre対応の `.png / .json / @2x.png / @2x.json` の合計4ファイルが作成されます。MapLibreに複数スプライトシートを読み込ませる方法は、 [公式ドキュメンテーション](https://maplibre.org/maplibre-style-spec/sprite/#multiple-sprite-sources) を参照にしてください。
+### プレビューの確認
+https://geolonia.github.io/custom-smartmap-sprite/
